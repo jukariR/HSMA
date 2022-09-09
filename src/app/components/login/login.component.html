@@ -9,12 +9,15 @@
                 <div class="col-auto head-text ps-0">SystemMHMA</div>
                 <!-- <div class="col-auto text p-0">the best option for your guests</div> -->
                 <div class="col-auto text p-0">la mejor opcion para tus huespedes</div>
-                <ul>
-                    <li class="text" *ngFor="let item of items | async">
-                      {{item.name}}
-                    </li>
-                  </ul>
-            </div>
+                    <ul>
+                        <li class="text" *ngFor="let item of items; let i = index">
+                            Name: {{item.name}}
+                        </li>
+                        <li class="text" *ngFor="let item of items; let i = index">
+                            Room: {{item.room}}
+                        </li>
+                    </ul>
+                </div>
         </div>
         <div class="pb-2 col-sm-12 col-md-4 login-text" [ngClass]="{'box-shadow-space': !changeClass, 'box-shadow': changeClass}">
             <h1 class="mt-0 d-flex justify-content-center">Login</h1>
@@ -29,7 +32,7 @@
                 </div>
                 <div class="col-12 mt-2 d-grid gap-2">
                     <!-- <button class="btn btn-outline-dark btn-md" type="submit" routerLink="/home">Login</button> -->
-                    <button class="btn btn-outline-dark btn-md" type="submit" (click)="info()" routerLink="/home">Login</button>
+                    <button class="btn btn-dark btn-md" type="submit" (click)="info()" routerLink="/home">Login</button>
                 </div>
                 <div class="col-12">
                     <span class="btn-hover"><small><u>Olvide mi contraseña</u></small></span>

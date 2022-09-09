@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
+import Guests from 'src/app/interfaces/guests';
 
 @Component({
   selector: 'app-login',
@@ -10,21 +10,25 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
   
-  items: Observable<any[]>;
+  items: Guests[];
   width: number = 0;
   public changeClass = false;
   
   constructor(private firestore: AngularFirestore) {
-    this.items = this.firestore.collection('guests').valueChanges();
-    console.log(this.items);
+    this.items = [];
+    this.firestore.collection('guests').valueChanges({ name: '', room: 0 }).subscribe((users: any) => {
+      this.items = users;
+      console.log("get data", this.items[0].name);
+      console.log("firebase data", users);
+    });
   }
 
   ngOnInit(): void {
   }
 
   async info(){
-    this.items = await this.firestore.collection('guests').valueChanges();
-    console.log(this.items);
+    // this.items = await this.firestore.collection('guests').valueChanges();
+    // console.log(this.items);
   }
 
   @HostListener('window:resize', ['$event'])
