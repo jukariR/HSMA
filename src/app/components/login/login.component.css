@@ -1,0 +1,44 @@
+.head-text{
+    font-family: 'Laila', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.text{
+    font-family: 'Rancho', cursive;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.login-text{
+    font-family: 'Rancho', cursive;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.margin-top{
+    margin-top: 20rem;
+}
+
+.little-margin{
+    margin-top: 5rem;
+}
+
+.box-shadow {
+    margin-top: 3rem;
+    padding: 5px;
+    margin-bottom: 5rem;
+    box-shadow: 5px 5px 20px #11005f;
+}
+
+.box-shadow-space {
+    margin-top: 12rem;
+    padding: 5px;
+    margin-bottom: 5rem;
+    box-shadow: 5px 5px 20px #11005f;
+}
+
+.btn-hover :hover{
+    color: rgb(40, 235, 183);
+    cursor: pointer;
+}
