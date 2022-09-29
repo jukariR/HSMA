@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-import Guests from 'src/app/interfaces/guests';
+import {Guests} from 'src/app/interfaces/guests';
 
 @Component({
   selector: 'app-login',
@@ -18,12 +18,13 @@ export class LoginComponent implements OnInit {
     this.items = [];
     this.firestore.collection('guests').valueChanges({ name: '', room: 0 }).subscribe((users: any) => {
       this.items = users;
-      console.log("get data", this.items[0].name);
+      console.log("get data", this.items[0]);
       console.log("firebase data", users);
     });
   }
 
   ngOnInit(): void {
+    
   }
 
   async info(){

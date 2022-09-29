@@ -28,6 +28,7 @@
     margin-top: 3rem;
     padding: 5px;
     margin-bottom: 5rem;
+    height: 300px;
     box-shadow: 5px 5px 20px #11005f;
 }
 
@@ -35,6 +36,7 @@
     margin-top: 12rem;
     padding: 5px;
     margin-bottom: 5rem;
+    max-height: 300px;
     box-shadow: 5px 5px 20px #11005f;
 }
 
