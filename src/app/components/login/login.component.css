@@ -1,18 +1,18 @@
 .head-text{
     font-family: 'Laila', sans-serif;
-    color: white;
+    color: black;
     font-size: 2.5rem;
 }
 
 .text{
     font-family: 'Rancho', cursive;
-    color: white;
+    color: black;
     font-size: 2.5rem;
 }
 
 .login-text{
     font-family: 'Rancho', cursive;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
@@ -28,19 +28,28 @@
     margin-top: 3rem;
     padding: 5px;
     margin-bottom: 5rem;
-    height: 300px;
-    box-shadow: 5px 5px 20px #11005f;
+    max-height: 400px;
+    box-shadow: 5px 5px 20px rgb(129, 129, 129);
+    background-color:rgb(255, 255, 255);
 }
 
-.box-shadow-space {
+/* .box-shadow-space {
     margin-top: 12rem;
     padding: 5px;
     margin-bottom: 5rem;
     max-height: 300px;
     box-shadow: 5px 5px 20px #11005f;
-}
+} */
 
 .btn-hover :hover{
     color: rgb(40, 235, 183);
     cursor: pointer;
+}
+
+.bg-img {
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../img/loginImg.jpg);
 }
