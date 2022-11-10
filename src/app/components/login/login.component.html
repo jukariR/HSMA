@@ -1,43 +1,44 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Amita&family=Laila&family=Poppins&family=Rancho&family=Rye&family=Vollkorn&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
-<div class="container">
-    <div class="row" [ngClass]="{'d-flex justify-content-center' : changeClass}">
-        <!-- <div class="col-sm-12 col-md-8 margin-top"> -->
-        <div [ngClass]="{'col-sm-12 little-margin': changeClass, 'col-md-8 margin-top': !changeClass}"> 
-            <div class="row d-flex justify-content-center align-items-end m-0">
-                <div class="col-auto head-text ps-0">SystemMHMA</div>
-                <!-- <div class="col-auto text p-0">the best option for your guests</div> -->
+<div class="container bg-img">
+    <div class="row">
+        <div>
+            <div class="row d-flex justify-content-center align-items-end mt-5">
+                <div class="col-auto head-text ps-0">SMHMA</div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-end">
                 <div class="col-auto text p-0">la mejor opcion para tus huespedes</div>
-                    <ul>
-                        <li class="text" *ngFor="let item of items; let i = index">
-                            Name: {{item.name}}
-                        </li>
-                        <li class="text" *ngFor="let item of items; let i = index">
-                            Room: {{item.room}}
-                        </li>
-                    </ul>
+                <!-- <ul>
+                    <li class="text" *ngFor="let item of items; let i = index">
+                        <span>Name: {{item.name}}</span>
+                        <br> 
+                        <span>Room: {{item.room}}</span>
+                        <hr>
+                    </li>
+                </ul> -->
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="pb-2 pt-1 col-sm-12 col-md-4 login-text box-shadow">
+                    <h1 class="mt-0 d-flex justify-content-center">Sign in</h1>
+                    <form class="row px-2">
+                        <div class="form-group col-12 mt-1">
+                            <label for="user">Email address</label>
+                            <input type="email" id="user" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="user">
+                        </div>
+                        <div class="form-group col-12 mt-1">
+                            <label for="passwd">Password</label>
+                            <input type="password" id="passwd" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="passwd">
+                        </div>
+                        <div class="col-12 mt-2 d-grid gap-2">
+                            <button class="btn btn-dark btn-md" type="submit" (click)="info()" routerLink="/home">Login</button>
+                        </div>
+                        <div class="col-12">
+                            <span class="btn-hover"><small><u>Olvide mi contraseña</u></small></span>
+                        </div>
+                    </form>
                 </div>
-        </div>
-        <div class="pb-2 col-sm-12 col-md-4 login-text" [ngClass]="{'box-shadow-space': !changeClass, 'box-shadow': changeClass}">
-            <h1 class="mt-0 d-flex justify-content-center">Login</h1>
-            <form class="row px-2">
-                <div class="form-group col-12 mt-1">
-                    <label for="user">Usuario</label>
-                    <input type="email" id="user" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="user">
-                </div>
-                <div class="form-group col-12 mt-1">
-                    <label for="passwd">Contraseña</label>
-                    <input type="password" id="passwd" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="passwd">
-                </div>
-                <div class="col-12 mt-2 d-grid gap-2">
-                    <!-- <button class="btn btn-outline-dark btn-md" type="submit" routerLink="/home">Login</button> -->
-                    <button class="btn btn-dark btn-md" type="submit" (click)="info()" routerLink="/home">Login</button>
-                </div>
-                <div class="col-12">
-                    <span class="btn-hover"><small><u>Olvide mi contraseña</u></small></span>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

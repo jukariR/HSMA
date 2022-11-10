@@ -1,0 +1,21 @@
+.title-text{
+    font-family: 'Laila', sans-serif;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.text{
+    font-family: 'Laila', sans-serif;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.font{
+    font-family: 'Laila', sans-serif;
+    color: black;
+    /* font-size: 1.5rem; */
+}
+
+.img-logo{
+    width: 50px !important;
+}
