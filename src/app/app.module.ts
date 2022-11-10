@@ -1,42 +1,14 @@
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
-
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-// import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-// import { environment } from '../environments/environment';
-// import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-// import { provideAuth,getAuth } from '@angular/fire/auth';
-// import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-// import { LoginComponent } from './components/login/login.component';
-// import { LandingPageComponent } from './components/landing-page/landing-page.component';
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     LoginComponent,
-//     LandingPageComponent
-//   ],
-//   imports: [
-//     BrowserModule,
-//     AppRoutingModule,
-//     provideFirebaseApp(() => initializeApp(environment.firebase)),
-//     provideAnalytics(() => getAnalytics()),
-//     provideAuth(() => getAuth()),
-//     provideFirestore(() => getFirestore()),
-//     AngularFireModule.initializeApp(environment.firebase),
-//     AngularFireAnalyticsModule,
-//     AngularFirestoreModule
-//   ],
-//   providers: [
-//     ScreenTrackingService,UserTrackingService
-//   ],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { 
+	IgxButtonModule,
+	IgxIconModule,
+	IgxLayoutModule,
+	IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule
+ } from "igniteui-angular";
 
 //Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -52,14 +24,23 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { NavbarComponent } from './ComponentsRepeat/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavbarComponent
   ],
   imports: [
+    IgxButtonModule,
+    IgxIconModule,
+    IgxLayoutModule,
+    IgxNavigationDrawerModule,
+    IgxRippleModule,
+    IgxToggleModule,
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -68,6 +49,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
