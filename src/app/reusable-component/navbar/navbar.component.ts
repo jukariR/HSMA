@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faRightToBracket} from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faCoffee, faComment, faComments, faHouse, faRightToBracket, faShop, faUsersLine} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  faCoffee = faCoffee;
-  RightBracket = faRightToBracket
+  home = faHouse;
+  rightBracket = faRightToBracket
+  briefcase = faBriefcase
+  shop = faShop
+  us = faUsersLine
+  qa = faComments
+
 
 }

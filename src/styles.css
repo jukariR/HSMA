@@ -1,0 +1,17 @@
+.logo-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+.title-text {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: 900;
+    /* font-family: 'Aileron', sans-serif; */
+}
+
+.normal-text {
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 1.1rem !important;
+    font-weight: 600;
+}
