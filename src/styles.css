@@ -1,3 +1,1 @@
-.bg{
-    background: linear-gradient(90deg, rgb(6, 2, 87) 0%, rgb(21, 21, 143) 35%, rgb(0,212,255) 100%);
-}
+.backg{background: url('back.jpg'); background-repeat: no-repeat;background-size: cover;}
