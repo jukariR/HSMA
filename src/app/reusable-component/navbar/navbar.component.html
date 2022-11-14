@@ -1,0 +1,47 @@
+<div class="sidebar">
+    <nav>
+        <ul>
+            <li>
+                <div class="title">
+                        <img src="assets/imgs/logoHSMA.jpg" alt="" class="logo">
+                        <p class="logo-text">HSMA</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="icons-menu d-flex justify-content-center">
+            <li>
+                <a [routerLink]="['/home']">
+                    <fa-icon [icon]="home"></fa-icon>
+                    <p class="normal-text">Inicio</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <fa-icon [icon]="briefcase"></fa-icon>
+                    <p class="normal-text">Servicios</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <fa-icon [icon]="us"></fa-icon>
+                    <p class="normal-text">Nosotros</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <fa-icon [icon]="qa"></fa-icon>
+                    <p class="normal-text">Q&A</p>
+                </a>
+            </li>
+        </ul>
+        
+        <ul>
+            <li>
+                <a [routerLink]="['/login']">
+                    <fa-icon [icon]="rightBracket"></fa-icon>
+                    <p class="normal-text">Sign in</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

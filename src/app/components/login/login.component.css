@@ -192,3 +192,5 @@ h2 {font-size: 20px; }
   
 .control--checkbox input:disabled:checked ~ .control__indicator {background-color: #7e0cf5; opacity: .2;}
   
+    /* background-image: url(../../../img/loginImg.jpg); */
+
