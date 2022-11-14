@@ -15,3 +15,28 @@
     font-size: 1.1rem !important;
     font-weight: 600;
 }
+
+.img-size {
+    max-height: 45rem;
+}
+
+.page-width {
+    max-width: fit-content;
+    padding-left: 60px !important;
+}
+
+.sections-light {
+    min-height: 25rem;
+    background-color: #F2EEE9;
+    color: dark;
+}
+
+.sections-dark {
+    min-height: 25rem;
+    background-color: #222629;
+    color: white;
+}
+
+.sections-img {
+    max-height: 12rem;
+}

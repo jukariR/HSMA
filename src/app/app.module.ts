@@ -21,10 +21,10 @@ import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
+    NavbarComponent,
     AppComponent,
     LoginComponent,
     LandingPageComponent,
-    NavbarComponent,
   ],
   imports: [
     BrowserModule,
