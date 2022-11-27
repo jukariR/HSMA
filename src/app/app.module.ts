@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
+import { FooterComponent } from './reusable-component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavbarComponent } from './reusable-component/navbar/navbar.component';
     AppComponent,
     LoginComponent,
     LandingPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
