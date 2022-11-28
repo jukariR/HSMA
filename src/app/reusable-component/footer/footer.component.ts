@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faPersonBreastfeeding } from '@fortawesome/free-solid-svg-icons';
+import { twitter } from '@igniteui/material-icons-extended';
+
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+
+  twitter = faPersonBreastfeeding;
 
   constructor() { }
 

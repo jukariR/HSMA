@@ -42,3 +42,9 @@
 .sections-img {
     max-height: 12rem;
 }
+
+.footer-section {
+    max-height: 13rem;
+    background-color: #222629;
+    color: white;
+}
