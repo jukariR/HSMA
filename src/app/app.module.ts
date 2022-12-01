@@ -19,6 +19,9 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 import { FooterComponent } from './reusable-component/footer/footer.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { UsComponent } from './components/us/us.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { FooterComponent } from './reusable-component/footer/footer.component';
     LoginComponent,
     LandingPageComponent,
     FooterComponent,
+    ServicesComponent,
+    ReservationComponent,
+    UsComponent,
   ],
   imports: [
     BrowserModule,
