@@ -9,12 +9,10 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class LoginComponent implements OnInit {
   
-  items: Guests[];
   width: number = 0;
   public changeClass = false;
   
   constructor(private crudService: CrudService) {
-    this.items = [];
     // this.firestore.collection('guests').valueChanges({ name: '', room: 0 }).subscribe((users: any) => {
     //   this.items = users;
     //   console.log("get data", this.items[0]);
@@ -26,11 +24,8 @@ export class LoginComponent implements OnInit {
     
   }
 
-  async info(){
-    this.crudService.getGuests(this.items);
-    console.log(this.items);
-    // this.items = await this.firestore.collection('guests').valueChanges();
-    // console.log(this.items);
+  info() {
+    this.crudService.getAllHotels()
   }
 
   @HostListener('window:resize', ['$event'])
