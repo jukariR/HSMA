@@ -3,12 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Modules
 import { AppRoutingModule } from './app-routing.module';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //Components
@@ -38,12 +32,6 @@ import { UsComponent } from './components/us/us.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule,
-    AngularFirestoreModule,
     BrowserAnimationsModule,
   ],
   providers: [],
