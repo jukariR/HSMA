@@ -22,7 +22,13 @@ export class CrudService {
   
   async postHotel(name: string, location: number){
     const conn = await connect(this.config)
-    const res = await conn.execute(`insert into hotel(name, location) values (?, ?)`, [name, location]);
+    const res = await conn.execute('insert into hotel(name, location) values (?, ?)', [name, location]);
     console.log((await res).rows)
   }
+
+  /*async delDB (){
+    const conn = await connect(this.config)
+    const res = await conn.execute('drop table hotel, hotel_location, alumnos, escuela');
+    console.log((await res).rows)
+  }*/
 }
