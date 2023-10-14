@@ -12,7 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
-import { FooterComponent } from './reusable-component/footer/footer.component';
+//import { FooterComponent } from './reusable-component/footer/footer.component';
 import { ServicesComponent } from './components/services/services.component';
 //import { ReservationComponent } from './components/reservation/reservation.component';
 //import { UsComponent } from './components/us/us.component';
@@ -23,7 +23,7 @@ import { ServicesComponent } from './components/services/services.component';
     AppComponent,
     LoginComponent,
     LandingPageComponent,
-    FooterComponent,
+    //FooterComponent,
     ServicesComponent,
     //ReservationComponent,
     //UsComponent,
