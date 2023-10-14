@@ -5,6 +5,20 @@ h1 {
     font-weight: 800;
 }
 
+.h1-big {
+    font-family: Elsie;
+    color: #766153;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.mid-img {
+    max-height: 60rem;
+    border-radius: 40px !important;
+    width: 100%;
+    object-fit: fill;
+}
+
 span {
     font-family: Playfair;
     font-size: 1.5rem;
@@ -13,8 +27,16 @@ span {
     color: #766153;
 }
 
-.car-h {
+.sec-pad {
     padding: 6.25rem;
+}
+
+.getstarted-pad {
+    padding: 0 6.25rem 0 6.25rem;
+}
+
+.gap-qa {
+    padding: 6.25rem 0 0 0;
 }
 
 .gap {
@@ -25,8 +47,12 @@ span {
     padding: 0 4rem 0 4rem;
 }
 
+.gap-img {
+    margin: 1.5rem 0 0 0;
+}
+
 .full-radius {
-    border-radius: 40px;
+    border-radius: 40px !important;
 }
 
 .ul-radius {

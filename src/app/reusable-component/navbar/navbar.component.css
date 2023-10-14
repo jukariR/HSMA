@@ -78,3 +78,11 @@ li p{
     letter-spacing: 0.3px;
     margin: 0;
 }
+
+span {
+    font-family: Elsie;
+    font-size: 1.5rem;
+    text-align: left;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
