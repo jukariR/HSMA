@@ -10,29 +10,27 @@ body{
 }
 
 ul {
+    height: 4.4rem;
     list-style-type: none;
 }
 
 .sidebar{
+    min-height: 4.4rem;
     max-height: 4.4rem;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #F2EEE9;
+    background-color: #EFF1ED;
     /*overflow: hidden;*/
     transition: width 0.2s;
     z-index: 9;
 }
 
 .title{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-decoration: none;
-    padding: 10px 0;
-    font-family: 'Poppins',sans-serif;
+    height: 4.4rem;
+    font-family: Playfair;
+    font-weight: bold;
     color: #000000;
 }
 
@@ -44,6 +42,7 @@ img.logo{
 
 li {
     height: 100%;
+    cursor: pointer;
 }
 
 li a{
@@ -51,9 +50,9 @@ li a{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-decoration: none;
-    font-family: 'Poppins',sans-serif;
+    font-family: Playfair;
     color: #000000;
 }
 
@@ -73,9 +72,9 @@ i{
 }
 
 li p{
-    width: 75px;
-    font-size: 16px;
+    font-family: Playfair;
+    font-size: 1.5rem;
     text-align: left;
     letter-spacing: 0.3px;
-    padding-top: .5rem;
+    margin: 0;
 }

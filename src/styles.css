@@ -1,22 +1,18 @@
 
 /* .backg{background: url('back.jpg'); background-repeat: no-repeat;background-size: cover;} */
 
-.logo-text {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.5rem !important;
-    font-weight: 600;
+@font-face {
+    font-family: 'Elsie';
+    src: url('./assets/fonts/Elsie-Regular.ttf');
 }
 
-.title-text {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: 900;
-    /* font-family: 'Aileron', sans-serif; */
+@font-face {
+    font-family: 'Playfair';
+    src: url('./assets/fonts/Playfair_144pt-Regular.ttf');
 }
 
-.normal-text {
-    font-family: 'Mukta Malar', sans-serif;
-    font-size: 1.1rem !important;
-    font-weight: 600;
+.bg-grey {
+    background-color: #EEEEEE;
 }
 
 .img-size {
@@ -27,24 +23,20 @@
     padding-top: 4.4rem !important;
 }
 
-.sections-light {
+.sections {
     min-height: 25rem;
-    background-color: #F2EEE9;
+    background-color: #EFF1ED;
     color: dark;
 }
 
-.sections-dark {
-    min-height: 25rem;
-    background-color: #222629;
-    color: white;
-}
-
 .sections-img {
-    max-height: 12rem;
+    max-height: 30rem;
+    width: 100%;
+    text-wrap: wrap;
 }
 
 .footer-section {
     max-height: 13rem;
-    background-color: #222629;
-    color: white;
+    background-color: #EFF1ED;
+    color: black;
 }

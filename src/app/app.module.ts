@@ -14,8 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 import { FooterComponent } from './reusable-component/footer/footer.component';
 import { ServicesComponent } from './components/services/services.component';
-import { ReservationComponent } from './components/reservation/reservation.component';
-import { UsComponent } from './components/us/us.component';
+//import { ReservationComponent } from './components/reservation/reservation.component';
+//import { UsComponent } from './components/us/us.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import { UsComponent } from './components/us/us.component';
     LandingPageComponent,
     FooterComponent,
     ServicesComponent,
-    ReservationComponent,
-    UsComponent,
+    //ReservationComponent,
+    //UsComponent,
   ],
   imports: [
     BrowserModule,
