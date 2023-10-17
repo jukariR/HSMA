@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
   selector: 'app-us',
@@ -10,6 +11,7 @@ export class UsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

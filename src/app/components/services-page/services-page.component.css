@@ -1,4 +1,4 @@
-h1, h5 {
+h1 {
     font-family: Elsie;
     color: #766153;
     font-size: 2rem;
@@ -17,14 +17,6 @@ h1, h5 {
     border-radius: 40px !important;
     width: 100%;
     object-fit: fill;
-}
-
-p {
-    font-family: Playfair;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.2;
-    color: #766153;
 }
 
 span {
@@ -69,23 +61,4 @@ span {
 
 .ur-radius {
     border-radius: 3rem 1rem 3rem 3rem;
-}
-
-.card {
-    min-width: 22.125rem;
-    max-width: 22.125rem;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.card-group {
-    overflow-x: scroll;
-}
-
-.card-overflow {
-    overflow-x: scroll;
-}
-
-.img-card {
-    max-height: 18.75rem;
 }

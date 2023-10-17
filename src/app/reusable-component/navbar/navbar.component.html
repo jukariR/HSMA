@@ -12,19 +12,19 @@
 
     <ul class="col-6 row">
         <li class="col-4">
-            <a [routerLink]="['/home']">
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="home" class="pe-3"></fa-icon>
                 <p>Inicio</p>
             </a>
         </li>
         <li class="col-4">
-            <a >
+            <a [routerLink]="['/services']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="briefcase" class="pe-3"></fa-icon>
                 <p>Servicios</p>
             </a>
         </li>
         <li class="col-4">
-            <a href="#">
+            <a [routerLink]="['/us']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="us" class="pe-3"></fa-icon>
                 <p>Nosotros</p>
             </a>
@@ -32,7 +32,7 @@
     </ul>
     
     <ul class="col-2">
-        <li class="d-flex justify-content-end">
+        <li>
             <a [routerLink]="['/login']">
                 <fa-icon [icon]="rightBracket" class="pe-3"></fa-icon>
                 <p>Sign in</p>

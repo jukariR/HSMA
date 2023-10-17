@@ -13,7 +13,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 //import { FooterComponent } from './reusable-component/footer/footer.component';
-import { ServicesComponent } from './components/services/services.component';
+import { ServicesComponent } from './components/services-page/services-page.component';
 //import { ReservationComponent } from './components/reservation/reservation.component';
 //import { UsComponent } from './components/us/us.component';
 

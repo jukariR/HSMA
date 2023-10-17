@@ -56,12 +56,49 @@ li a{
     color: #000000;
 }
 
-li a:hover{
+/*li:hover {
+    text-decoration: underline;
+}*/
+
+li:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    left: 50%;
+    position:sticky;
+    background-image: linear-gradient(
+        to right,
+        #2a88e6,
+        rgb(0, 0, 0)
+    );
+    color: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+li:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+/*li a:hover{
     height: 100%;
     background-image: linear-gradient(
         to right,
         #2a88e6 7px,
         rgba(67, 67, 67, 0.413) 7px
+    );
+    color: #000000;
+}*/
+
+.active{
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        #2a88e6 7px,
+        rgba(183, 183, 183, 0.897) 7px
     );
     color: #000000;
 }
