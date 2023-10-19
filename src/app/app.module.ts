@@ -15,7 +15,7 @@ import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 //import { FooterComponent } from './reusable-component/footer/footer.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
 //import { ReservationComponent } from './components/reservation/reservation.component';
-//import { UsComponent } from './components/us/us.component';
+import { UsComponent } from './components/us/us.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { ServicesPageComponent } from './components/services-page/services-page.
     //FooterComponent,
     ServicesPageComponent,
     //ReservationComponent,
-    //UsComponent,
+    UsComponent,
   ],
   imports: [
     BrowserModule,

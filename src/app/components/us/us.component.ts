@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CrudService } from 'src/app/services/crud.service';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faTwitter, faFacebook, faWhatsapp, fab } from '@fortawesome/free-brands-svg-icons';
+import { library as legacy } from '@fortawesome/fontawesome-svg-core';
+
 
 @Component({
   selector: 'app-us',
@@ -8,7 +11,15 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class UsComponent implements OnInit {
 
-  constructor() { }
+  brief = faBriefcase
+  insta = faInstagram
+  face = faTwitter
+  twit = faFacebook
+  whats = faWhatsapp
+
+  constructor() {
+    legacy.add(fab)
+  }
 
   ngOnInit(): void {
 

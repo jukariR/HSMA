@@ -89,3 +89,8 @@ span {
 .img-card {
     max-height: 18.75rem;
 }
+
+.icon {
+    font-size: 2rem;
+    color: rgb(40, 40, 40);
+}
