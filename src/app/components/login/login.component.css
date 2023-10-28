@@ -1,0 +1,77 @@
+h1, p {
+    font-family: Elsie;
+    color: #766153;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.h1-big {
+    font-family: Elsie;
+    color: #766153;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.mid-img {
+    max-height: 60rem;
+    border-radius: 40px !important;
+    width: 100%;
+    object-fit: fill;
+}
+
+span {
+    font-family: Playfair;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #766153;
+}
+
+.sec-pad {
+    height: 100vh;
+}
+
+.getstarted-pad {
+    padding: 0 6.25rem 0 6.25rem;
+}
+
+.gap-qa {
+    padding: 6.25rem 0 0 0;
+}
+
+.gap {
+    padding-top: 3.75rem;
+}
+
+.gap-text {
+    padding: 0 4rem 0 4rem;
+}
+
+.gap-img {
+    margin: 1.5rem 0 0 0;
+}
+
+.full-radius {
+    border-radius: 40px !important;
+}
+
+.ul-radius {
+    border-radius: 1rem 3rem 3rem 3rem;
+}
+
+.ur-radius {
+    border-radius: 3rem 1rem 3rem 3rem;
+}
+
+
+.box-shadow {
+    box-shadow: 
+        1px 1px 1px 1px rgb(34, 34, 34), 
+        2px 2px 4px 4px rgb(86, 88, 89),
+        3px 3px 8px 8px rgb(122, 122, 156),
+        4px 4px 10px 10px rgb(187, 196, 249);
+    
+    border-radius: 2rem;
+}
+
+  

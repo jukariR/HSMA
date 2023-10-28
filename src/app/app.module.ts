@@ -12,9 +12,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './reusable-component/navbar/navbar.component';
-//import { FooterComponent } from './reusable-component/footer/footer.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
-//import { ReservationComponent } from './components/reservation/reservation.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsComponent } from './components/us/us.component';
 
 @NgModule({
@@ -23,9 +22,8 @@ import { UsComponent } from './components/us/us.component';
     AppComponent,
     LoginComponent,
     LandingPageComponent,
-    //FooterComponent,
     ServicesPageComponent,
-    //ReservationComponent,
+    DashboardComponent,
     UsComponent,
   ],
   imports: [
