@@ -19,7 +19,7 @@ h1, p {
     object-fit: fill;
 }
 
-span {
+span, label {
     font-family: Playfair;
     font-size: 1.5rem;
     font-weight: 600;

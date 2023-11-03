@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit {
   us = faUsersLine
   qa = faComments
 
+  id = -1;
+
   constructor() { }
 
   ngOnInit(): void {

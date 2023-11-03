@@ -1,0 +1,146 @@
+<div class="container">
+    <div style="height: 100vh;" class="d-flex align-items-center justify-content-center">
+        <div class="row">
+
+            <div class="mb-1 col-12 row d-felx justify-content-center">
+                <div class="col-10">
+                    <button type="button" class="collapsible" (click)="RegisterStep(1)">Dirección</button>
+                    <div class="row" *ngIf="step == 1">
+
+                        <div class="row col-6">
+                            <label for="street" class="col-4 d-flex align-items-center justify-content-center">Calle</label>
+                            <div class="col-8">
+                                <input type="text" id="street" class="form-control p-3 my-1" style="height:10px" formControlName="street" required>
+                            </div>
+                        </div>
+
+                        <div class="row col-6">
+                            <label for="number" class="col-4 d-flex align-items-center justify-content-center">Numero Ext</label>
+                            <div class="col-8">
+                                <input type="number" maxlength="8" id="number" class="form-control p-3 my-1" oninput="this.value = this.value.slice(0, 8)" style="appearance: textfield; height:10px" formControlName="number" required>
+                            </div>
+                        </div>
+
+                        <div class="row col-6">
+                            <label for="city" class="col-4 d-flex align-items-center justify-content-center">Ciudad</label>
+                            <div class="col-8">
+                                <input type="text" id="city" class="form-control p-3 my-1" style="height:10px" formControlName="city" required>
+                            </div>
+                        </div>
+
+                        <div class="row col-6">
+                            <label for="state" class="col-4 d-flex align-items-center justify-content-center">Estado</label>
+                            <div class="col-8">
+                                <input type="text" id="state" class="form-control p-3 my-1" style="height:10px" formControlName="state" required> 
+                            </div>
+                        </div>
+
+                        <div class="row col-6">
+                            <label for="zip" class="col-4 d-flex align-items-center justify-content-center">C.P.</label>
+                            <div class="col-8">
+                                <input type="number" maxlength="5" id="zip" class="form-control p-3 my-1" oninput="this.value = this.value.slice(0, 5)" style="appearance: textfield; height:10px" formControlName="zip" required>
+                            </div>
+                        </div>
+
+                        <div class="row col-6">
+                            <label for="country" class="col-4 d-flex align-items-center justify-content-center">País</label>
+                            <div class="col-8">
+                                <input type="text" id="country" class="form-control p-3 my-1" style="height:10px" formControlName="country" value="México" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 d-felx justify-content-end mt-3">
+                            <button type="button" class="btn btn-outline-primary col-2" (click)="RegisterStep(2)">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-1 col-12 row d-felx justify-content-center">
+                <div class="col-10">
+                    <button type="button" class="collapsible">Datos Personales</button>
+                    <div class="row" *ngIf="step == 2">
+                        <div class="row col-12">
+                            <label for="name" class="col-4 d-flex align-items-center justify-content-center">Nombre</label>
+                            <div class="col-8">
+                                <input type="text" id="name" class="form-control p-3 my-1" style="height:10px" formControlName="name">
+                            </div>
+                        </div>
+                        
+                        <div class="row col-12">
+                            <label for="lastName" class="col-4 d-flex align-items-center justify-content-center">Apellidos</label>
+                            <div class="col-8">
+                                <input type="text" id="lastName" class="form-control p-3 my-1" style="height:10px" formControlName="lastName">
+                            </div>
+                        </div>
+
+                        <div class="row col-5">
+                            <label for="email" class="col-4 d-flex align-items-center justify-content-center">Mail</label>
+                            <div class="col-8">
+                                <input type="email" id="email" class="form-control p-3 my-1" style="height:10px" formControlName="email">
+                            </div>
+                        </div>
+
+                        <div class="row col-7">
+                            <label for="birth" class="col-5 d-flex align-items-center justify-content-center">F. Nacimiento</label>
+                            <div class="col-7">
+                                <input type="date" id="birth" class="form-control pb-4 pt-2 my-1" style="height:10px;" formControlName="birth">
+                            </div>
+                        </div>
+
+                        <div class="row col-5">
+                            <label for="phone" class="col-4 d-flex align-items-center justify-content-center">Tel.</label>
+                            <div class="col-8">
+                                <input type="number" maxlength="10" id="phone" class="form-control p-3 my-1" oninput="this.value = this.value.slice(0, 10)" style="appearance: textfield; height:10px" formControlName="phone">
+                            </div>
+                        </div>
+
+                        <div class="row col-7">
+                            <label for="emergPhone" class="col-5 d-flex align-items-center justify-content-center">Tel. Emergencia</label>
+                            <div class="col-7">
+                                <input type="text"  maxlength="10" oninput="this.value = this.value.slice(0, 10)" style="appearance: textfield; height:10px" id="emergPhone" class="form-control p-3 my-1" formControlName="emergPhone">
+                            </div>
+                        </div>
+
+                        <div class="row col-12 d-felx justify-content-end mt-3">
+                            <button type="button" class="btn btn-outline-primary col-2" (click)="RegisterStep(3)">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-1 col-12 row d-felx justify-content-center">
+                <div class="col-10">
+                    <button type="button" class="collapsible">Metodo de Pago</button>
+                    <div class="row" *ngIf="step == 3">
+                        <div class="row col-12">
+                            <label for="user" class="col-4 d-flex align-items-center justify-content-center">Usuario</label>
+                            <div class="col-8">
+                                <input type="email" id="user" class="form-control p-3 my-1" style="height:10px" formControlName="user">
+                            </div>
+                        </div>
+
+                        <div class="row col-12">
+                            <label for="user" class="col-4 d-flex align-items-center justify-content-center">Usuario</label>
+                            <div class="col-8">
+                                <input type="email" id="user" class="form-control p-3 my-1" style="height:10px" formControlName="user">
+                            </div>
+                        </div>
+
+                        <div class="row col-12">
+                            <label for="user" class="col-4 d-flex align-items-center justify-content-center">Usuario</label>
+                            <div class="col-8">
+                                <input type="email" id="user" class="form-control p-3 my-1" style="height:10px" formControlName="user">
+                            </div>
+                        </div>
+
+                        <div class="row col-12 d-felx justify-content-end mt-3">
+                            <button type="button" class="btn btn-outline-primary col-2" (click)="RegisterStep(2)">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

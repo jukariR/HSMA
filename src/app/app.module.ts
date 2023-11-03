@@ -15,6 +15,7 @@ import { NavbarComponent } from './reusable-component/navbar/navbar.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsComponent } from './components/us/us.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UsComponent } from './components/us/us.component';
     ServicesPageComponent,
     DashboardComponent,
     UsComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

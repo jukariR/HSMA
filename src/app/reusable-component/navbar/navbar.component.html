@@ -11,25 +11,32 @@
     </ul>
 
     <ul class="col-6 row">
-        <li class="col-4">
+        <li class="col-3">
             <a [routerLink]="['/home']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="home" class="pe-3"></fa-icon>
                 <p>Inicio</p>
             </a>
         </li>
-        <li class="col-4">
+        <li class="col-3">
             <a [routerLink]="['/services']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="briefcase" class="pe-3"></fa-icon>
                 <p>Servicios</p>
             </a>
         </li>
-        <li class="col-4">
+        <li class="col-3">
             <a [routerLink]="['/us']" [routerLinkActive]="['active']">
                 <fa-icon [icon]="us" class="pe-3"></fa-icon>
                 <p>Nosotros</p>
             </a>
         </li>
+        <li class="col-3" *ngIf="id != -1">
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']">
+                <fa-icon [icon]="home" class="pe-3"></fa-icon>
+                <p>Inicio</p>
+            </a>
+        </li>
     </ul>
+    
     
     <ul class="col-2">
         <li>

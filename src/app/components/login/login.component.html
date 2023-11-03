@@ -19,20 +19,24 @@
         </div>
         
         <div class="row d-felx justify-content-center">
-            <form class="col-12 flex-column">
-                <div class="d-felx justify-content-around">
-                    <label for="user" class="">Usuario</label>
-                    <input type="email" id="user" class="form-control shadow p-3 mb-1 bg-body rounded w-50" style="height:10px" formControlName="user">
+            <form class="col-12">
+                <div class="row d-felx justify-content-center">
+                    <label for="user" class="col-3 d-flex align-items-center justify-content-center">Usuario</label>
+                    <div class="col-5">
+                        <input type="email" id="user" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="user">
+                    </div>
                 </div>
 
-                <div class="d-felx justify-content-center">
-                    <label for="passwd" class="d-inline-flex">Contraseña</label>
-                    <input type="password" id="passwd" class="form-control shadow p-3 mb-1 bg-body rounded d-inline-flex w-50" style="height:10px" formControlName="passwd">
+                <div class="row d-felx justify-content-center">
+                    <label for="passwd" class="col-3 d-flex justify-content-center align-items-center ">Contraseña</label>
+                    <div class="col-5">
+                        <input type="password" id="passwd" class="form-control shadow p-3 mb-1 bg-body rounded d-inline-flex" style="height:10px" formControlName="passwd">
+                    </div>
                 </div>
 
-                <div class="d-flex justify-content-around">
-                    <span class=" btn button" type="submit" (click)="info()" routerLink="/home"> login</span>
-                    <span routerLink="/home"><small><u>Registro</u></small></span>
+                <div class="row mt-5">
+                    <span class="col-6 d-flex justify-content-center align-items-center" style="cursor: pointer;" routerLink="/register"><small><u>Registro</u></small></span>
+                    <span class="btn button col-6 justify-content-center align-items-center" type="submit" (click)="info()"> login</span>
                 </div>
             </form> 
         </div>
