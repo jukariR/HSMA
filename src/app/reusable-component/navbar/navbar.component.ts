@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faBriefcase, faComments, faHouse, faRightToBracket, faShop, faUsersLine} from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faBriefcase, faComments, faHouse, faRightToBracket, faShop, faUsersLine, faChartLine} from '@fortawesome/free-solid-svg-icons';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -14,13 +16,23 @@ export class NavbarComponent implements OnInit {
   shop = faShop
   us = faUsersLine
   qa = faComments
+  dash = faChartLine
 
   id = -1;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    let ls = localStorage.getItem('id');
+    ls != null ? this.id = parseInt(ls) : -1
   }
 
+  logOut() {
+    localStorage.removeItem('id')
+    this.router.navigate(['/home'])
+    timer(100).subscribe(x => {
+      window.location.reload()
+    })
+  }
 
 }

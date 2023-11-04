@@ -30,9 +30,9 @@
             </a>
         </li>
         <li class="col-3" *ngIf="id != -1">
-            <a [routerLink]="['/home']" [routerLinkActive]="['active']">
-                <fa-icon [icon]="home" class="pe-3"></fa-icon>
-                <p>Inicio</p>
+            <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']">
+                <fa-icon [icon]="dash" class="pe-3"></fa-icon>
+                <p>Tablero</p>
             </a>
         </li>
     </ul>
@@ -40,9 +40,14 @@
     
     <ul class="col-2">
         <li>
-            <a [routerLink]="['/login']">
+            <a [routerLink]="['/login']" *ngIf="id == -1">
                 <fa-icon [icon]="rightBracket" class="pe-3"></fa-icon>
                 <p>Sign in</p>
+            </a>
+
+            <a [routerLink]="['/login']" *ngIf="id != -1" (click)="logOut()">
+                <fa-icon [icon]="rightBracket" class="pe-3"></fa-icon>
+                <p>Log Out</p>
             </a>
         </li>
     </ul>
