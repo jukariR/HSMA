@@ -28,11 +28,13 @@
     "@igniteui/material-icons-extended": "^2.10.0",
     "@planetscale/database": "^1.5.0",
     "@popperjs/core": "^2.11.6",
+    "bcrypt": "^5.1.1",
     "bootstrap": "^5.2.1",
     "fflate": "^0.7.3",
     "hammerjs": "^2.0.8",
     "igniteui-angular": "^14.2.5",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.6.13",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

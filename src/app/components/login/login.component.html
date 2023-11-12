@@ -19,24 +19,33 @@
         </div>
         
         <div class="row d-felx justify-content-center">
-            <form class="col-12">
+            <form class="col-12" [formGroup]="log">
                 <div class="row d-felx justify-content-center">
-                    <label for="user" class="col-3 d-flex align-items-center justify-content-center">Usuario</label>
+                    <label for="user" class="col-3 d-flex align-items-center justify-content-center">Email</label>
                     <div class="col-5">
-                        <input type="email" id="user" class="form-control shadow p-3 mb-1 bg-body rounded" style="height:10px" formControlName="user">
+                        <input type="email" id="email" class="form-control p-3 mb-1 bg-body rounded" style="height:10px" formControlName="email" onchange="ValidateMail()">
                     </div>
+                </div>
+                <div class="row d-felx justify-content-end" *ngIf="!ValidateMail()">
+                    <span class="col-7 warning">Introduce un correo electronico valido</span>
                 </div>
 
                 <div class="row d-felx justify-content-center">
                     <label for="passwd" class="col-3 d-flex justify-content-center align-items-center ">Contraseña</label>
                     <div class="col-5">
-                        <input type="password" id="passwd" class="form-control shadow p-3 mb-1 bg-body rounded d-inline-flex" style="height:10px" formControlName="passwd">
+                        <input type="password" id="passwd" class="form-control p-3 mb-1 bg-body rounded" style="height:10px" formControlName="passwd" onchange="ValidatePasswd()">
                     </div>
                 </div>
+                <div class="row d-felx justify-content-end" *ngIf="!ValidatePasswd()">
+                    <span class="col-7 warning">
+                        La cotraseña debe de contener 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y 10 caracteres
+                    </span>
+                </div>
 
-                <div class="row mt-5">
-                    <span class="col-6 d-flex justify-content-center align-items-center" style="cursor: pointer;" routerLink="/register"><small><u>Registro</u></small></span>
-                    <span class="btn button col-6 justify-content-center align-items-center" type="submit" (click)="login()"> login</span>
+                <div class="row mt-5 d-felx justify-content-around">
+                    <span class="col-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" routerLink="/register"><small><u>Registro</u></small></span>
+                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" *ngIf="!Validate()" disabled> login</button>
+                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" (click)="login()" *ngIf="Validate()"> login</button>
                 </div>
             </form> 
         </div>

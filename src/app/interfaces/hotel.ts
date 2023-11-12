@@ -1,36 +1,27 @@
-import { Address, Guests } from "./guests";
-
-export interface Hotel {
-    name: string;
-    address: Address[];
-    rooms: Rooms[];
-    packages: Package[];
+export interface Address {
+    street: string;
+    number: string;
+    phone: string;
+    city: string; 
+    state: string;
+    colony: string;
+    country: string;
+    latitude: string;
+    longitude: string;
 }
 
-export interface Rooms {
-    number: string;
+export interface Payment {
+    number: string; //clabe bancaria
+    boucher: string;
+    amount: string;
+    verification: boolean;
     type: number;
-    price: string;
-    capacity: number;
-    guest: Guests;
 }
 
-export interface Package {
-    number: string;
-    description: string;
-    price: string;
-    types: string[];
-    qty_rooms: number[];
-    activities: Activity[];
-}
-
-export interface Activity {
-    number: string;
-    description: string;
-    price: string;
-    dt_start: Date;
-    dt_end: Date;
-    dur_time: Long;
+export interface Login {
+    email: string,
+    id: number,
+    password: string
 }
 
 export interface Staff {

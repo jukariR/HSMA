@@ -27,6 +27,14 @@ span, label {
     color: #766153;
 }
 
+.warning {
+    font-family: Playfair;
+    font-size: .8rem;
+    font-weight: 400;
+    color: red;
+    line-height: 1.4;
+}
+
 .sec-pad {
     height: 100vh;
 }

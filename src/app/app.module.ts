@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //Modules
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Components
 import { environment } from '../environments/environment';
@@ -33,6 +34,8 @@ import { RegisterComponent } from './components/register/register.component';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
