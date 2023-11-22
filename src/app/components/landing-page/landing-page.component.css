@@ -1,15 +1,23 @@
-h1 {
-    font-family: Elsie;
+h1, h5 {
+    font-family: 'Source Code Pro', monospace;
     color: #766153;
     font-size: 2rem;
     font-weight: 800;
 }
 
 .h1-big {
-    font-family: Elsie;
+    font-family: 'Source Code Pro', monospace;
     color: #766153;
     font-size: 3rem;
     font-weight: 800;
+}
+
+p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #766153;
 }
 
 .mid-img {
@@ -19,13 +27,34 @@ h1 {
     object-fit: fill;
 }
 
+label {
+    font-family: 'Source Code Pro', monospace;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+input {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+}
+
 span {
-    font-family: Playfair;
+    font-family: 'Source Code Pro', monospace;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.4;
     color: #766153;
 }
+
+.custom-container {
+    max-width: 700px;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+.form-group {
+    margin-bottom: 20px;
+  }
 
 .sec-pad {
     padding: 6.25rem;
