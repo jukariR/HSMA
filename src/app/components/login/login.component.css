@@ -5,11 +5,29 @@ h1, p {
     font-weight: 800;
 }
 
+h2 {
+    font-family: 'Source Code Pro', monospace;
+    color: #766153;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
 .h1-big {
     font-family: Elsie;
     color: #766153;
     font-size: 3rem;
     font-weight: 800;
+}
+
+label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+input {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
 }
 
 .mid-img {
@@ -19,7 +37,7 @@ h1, p {
     object-fit: fill;
 }
 
-span, label {
+span {
     font-family: Playfair;
     font-size: 1.5rem;
     font-weight: 600;
