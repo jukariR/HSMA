@@ -75,18 +75,18 @@
                 </div>
 
                 <div class="container custom-container">
-                    <form style="margin-top: 20px;">
+                    <form style="margin-top: 20px;" [formGroup]="startFormGroup" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <mat-form-field style="width: 100%;">
                                 <mat-label>Nombre(s)</mat-label>
-                                <input matInput required>
+                                <input matInput placeholder="Nombre(s)" formControlName="nameCtrl" required>
                             </mat-form-field>
                         </div>
                       
                         <div class="form-group">
                             <mat-form-field style="width: 100%;">
                                 <mat-label>Apellido(s)</mat-label>
-                                <input matInput required>
+                                <input matInput placeholder="Apellido(s)" formControlName="lastNameCtrl" required>
                             </mat-form-field>
                         </div>
                       
@@ -94,7 +94,7 @@
                             <mat-form-field style="width: 100%;">
                                 <mat-label>Fecha de nacimiento</mat-label>
                               <!-- #docregion toggle -->
-                                <input matInput required [matDatepicker]="picker">
+                                <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="birthCtrl" required>
                                 <mat-hint>MM/DD/YYYY</mat-hint>
                                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
@@ -103,7 +103,8 @@
                         </div>
                       
                         <div class="text-center" style="margin-top: 20px;">
-                            <button mat-flat-button color="primary" style="width: 180px;" [routerLink]="['/register']">Registrarse</button>
+                            <!--[routerLink]="['/register']"-->
+                            <button mat-button style="width: 180px;">Registrarse</button>
                         </div>
                       </form>
                   </div>

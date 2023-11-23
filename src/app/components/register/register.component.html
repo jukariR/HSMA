@@ -4,7 +4,7 @@
             <mat-card-content>
                 <mat-stepper orientation="vertical" [linear]="true" #stepper>
                     <mat-step [stepControl]="phoneFormGroup">
-                      <form [formGroup]="phoneFormGroup">
+                      <form [formGroup]="phoneFormGroup" (ngSubmit)="onSubmitPhone()">
                         <ng-template matStepLabel>Ingresa tu teléfono y uno de emergencia</ng-template>
                         
                         <div class="form-group">
@@ -27,7 +27,7 @@
                       </form>
                     </mat-step>
                     <mat-step [stepControl]="accountFormGroup">
-                      <form [formGroup]="accountFormGroup">
+                      <form [formGroup]="accountFormGroup" (ngSubmit)="onSubmitAccount()">
                         <ng-template matStepLabel>Correo y contraseña</ng-template>
 
                         <div class="form-group">
@@ -59,7 +59,7 @@
                     </mat-step>
 
                     <mat-step [stepControl]="addressFormGroup">
-                        <form [formGroup]="addressFormGroup">
+                        <form [formGroup]="addressFormGroup" (ngSubmit)="onSubmitAddress()">
                             <ng-template matStepLabel>Dirección</ng-template>
                             
                             <div class="form-group">

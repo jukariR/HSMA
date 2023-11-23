@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'home', component: LandingPageComponent },
   { path: 'services', component: ServicesPageComponent },
   { path: 'us', component: UsComponent },
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'register', component: RegisterComponent},
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

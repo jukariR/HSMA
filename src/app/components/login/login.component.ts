@@ -5,7 +5,7 @@ import { Login } from 'src/app/interfaces/hotel';
 import { CrudService } from 'src/app/services/crud.service';
 
 import {
-  FormGroup,
+  FormBuilder,
   FormControl,
   FormGroupDirective,
   NgForm,
@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -32,37 +33,37 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatCardModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule, ReactiveFormsModule, MatCardModule],
 })
 export class LoginComponent implements OnInit {
 
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-
-  matcher = new MyErrorStateMatcher();
-  
-  width: number = 0;
-  public changeClass = false;
-  
-  log: FormGroup = new FormGroup({
-    email: new FormControl(''),
-    passwd: new FormControl('')
+  formGroup = this._formBuilder.group({
+    emailCtrl: ['', [Validators.required, Validators.email]],
+    passwordCtrl: ['', [Validators.required, Validators.minLength(8)]]
   });
 
-  get email() { return this.log.get('email')?.value }
-  get passwd() { return this.log.get('passwd')?.value }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000
+    });
+  }
 
-  constructor(private crudService: CrudService, private router: Router) {
-    
+  onSubmit() {
+    if (this.formGroup.valid) {
+      this._router.navigate(['/dashboard']);
+    } else {
+      this.openSnackBar("Error, teléfonos no validos", "Ok");
+    }
   }
 
   ngOnInit(): void {
-    this.Validate()
+  }
+
+  constructor(private _formBuilder: FormBuilder, private _router: Router, private crudService: CrudService, private _snackBar: MatSnackBar, private router: Router) {
+    
   }
   
-  ngOnChange(){
-  }
-  
-  async login() {
+  /*async login() {
     const data = await this.crudService.ComparePassword(this.email);
 
     if(data.length == 0){
@@ -75,34 +76,5 @@ export class LoginComponent implements OnInit {
       )
       console.log(data)
     }
-  }
-  
-  ValidateMail() {
-    const regexMail : RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if(regexMail.test(this.email))
-      return true
-    return false
-  }
-
-  ValidatePasswd() {
-    const regexPass:RegExp= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_\-\.])[A-Za-z\d@$!%*?&_\-\.]{10,}$/
-    if(regexPass.test(this.passwd) || this.passwd == "password")
-      return true
-    return false
-  }
-
-  Validate() {
-    if(!this.ValidateMail() || !this.ValidatePasswd())
-      return false;
-    return true
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.width = event.target.innerWidth;
-    if(this.width < 821)
-      this.changeClass = true;
-    else
-      this.changeClass = false;
-  }
+  }*/
 }
