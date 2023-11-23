@@ -1,18 +1,44 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { isEmpty, timer } from 'rxjs';
 import { Login } from 'src/app/interfaces/hotel';
 import { CrudService } from 'src/app/services/crud.service';
-import Swal from 'sweetalert2';
+
+import {
+  FormGroup,
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {ErrorStateMatcher} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.css'],
+  standalone: true,
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatCardModule],
 })
 export class LoginComponent implements OnInit {
+
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
+  matcher = new MyErrorStateMatcher();
   
   width: number = 0;
   public changeClass = false;
@@ -40,14 +66,6 @@ export class LoginComponent implements OnInit {
     const data = await this.crudService.ComparePassword(this.email);
 
     if(data.length == 0){
-      Swal.fire({
-        position: 'bottom-end',
-        title: 'Error!',
-        text: 'El usuario o la contraseña no existen',
-        icon: 'error',
-        showConfirmButton: false,
-        timer: 3000
-      })
     }
     else{
       localStorage.setItem('id', data[0].id.toString());

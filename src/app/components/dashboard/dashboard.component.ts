@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+
 @Component({
   selector: 'app-reservation',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  standalone: true,
+  imports: [MatTabsModule, MatGridListModule, MatCardModule],
 })
 export class DashboardComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if(!localStorage.getItem('id'))
-      this.router.navigate(['/home'])
   }
-
 }

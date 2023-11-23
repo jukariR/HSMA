@@ -1,37 +1,60 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  standalone: true,
+  imports: [
+    MatCardModule,
+    MatButtonModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
 })
+
 export class RegisterComponent implements OnInit {
-
-  step = 1;
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 
-  RegisterStep(active: number) {
-    this.step = active
-    console.log(this.step)
-    return this.step
-  }
-  /*var coll = document.getElementsByClassName("collapsible");
-  var i;
+  phoneFormGroup = this._formBuilder.group({
+    phoneCtrl: ['', Validators.required],
+    emergencyPhoneCtrl: ['', Validators.required],
+  });
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }*/
+  accountFormGroup = this._formBuilder.group({
+    emailCtrl: ['', Validators.required], //, Validators.email
+    passwordCtrl: ['', Validators.required],
+    repeatPasswordCtrl: ['', Validators.required],
+  });
 
+  addressFormGroup = this._formBuilder.group({
+    streetCtrl: ['', Validators.required],
+    numberCtrl: ['', Validators.required],
+    cityCtrl: ['', Validators.required],
+    stateCtrl: ['', Validators.required],
+    zipCodeCtrl: ['', Validators.required],
+    countryCtrl: ['', Validators.required],
+  });
+
+
+  constructor(private _formBuilder: FormBuilder) {}
 }

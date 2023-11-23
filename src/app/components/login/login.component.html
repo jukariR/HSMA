@@ -1,34 +1,55 @@
 
-<div class="container d-flex align-items-center justify-content-center sec-pad">
-
+<div class="h-100 d-flex justify-content-center align-items-center">
     <div class="container">
-        <div class="card p-4 shadow" style="width: 100%; overflow: visible;">
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="sections-img ur-radius" style="width: 100%;" src="http://cdn.cnn.com/cnnnext/dam/assets/140127103345-peninsula-shanghai-deluxe-mock-up.jpg">
-                </div>
-                <div class="col-md-6 align-items-center justify-content-center">
-                    <div class="card p-4" style="width: 100%; min-height: 200px !important;">
-                        <h2 class="mb-4">Iniciar sesión</h2>
-                        <br/>
-                        <br/>
-                        <br/>
 
-                        <form>
-                            <div class="form-group">
-                                <input type="text" placeholder="EMAIL" class="form-control border-0 border-bottom" id="username" name="username" required>
+        <mat-card>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="sections-img ur-radius" style="width: 100%;" src="http://cdn.cnn.com/cnnnext/dam/assets/140127103345-peninsula-shanghai-deluxe-mock-up.jpg">
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="h-100 d-flex justify-content-center align-items-center">
+                            <div class="container">
+                                <mat-card>
+                                    <mat-card-content>
+                                        <form>
+                                            <h2 class="mb-4">Iniciar sesión</h2>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+        
+                                            <div class="form-group">
+                                                <div class="text-center">
+                                                    <mat-form-field style="width: 280px;">
+                                                        <mat-label>Correo</mat-label>
+                                                        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+            
+                                            <div class="form-group">
+                                                <div class="text-center">
+                                                    <mat-form-field style="width: 280px;">
+                                                        <mat-label>Contraseña</mat-label>
+                                                        <input matInput required>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+            
+                                            <div class="text-center">
+                                                <button mat-flat-button color="primary" style="width: 180px;">Iniciar sesión</button>
+                                            </div>
+                                        </form>
+                                    </mat-card-content>
+                                </mat-card>
                             </div>
-
-                            <div class="form-group" style="margin-top: 20px;">
-                                <input type="password" placeholder="CONTRASEÑA" class="form-control border-0 border-bottom" id="password" name="password" required>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block" style="width: 100%; margin-top: 50px;">Iniciar sesión</button>
-                          </form>
+                        </div>
                     </div>
                 </div>
-              </div>
-        </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 
 
@@ -51,14 +72,14 @@
         </div>
         
         <div class="row d-felx justify-content-center">
-            <form class="col-12" [formGroup]="log">
+            <form class="col-12">
                 <div class="row d-felx justify-content-center">
                     <label for="user" class="col-3 d-flex align-items-center justify-content-center">Email</label>
                     <div class="col-5">
                         <input type="email" id="email" class="form-control p-3 mb-1 bg-body rounded" style="height:10px" formControlName="email" onchange="ValidateMail()">
                     </div>
                 </div>
-                <div class="row d-felx justify-content-end" *ngIf="!ValidateMail()">
+                <div class="row d-felx justify-content-end">
                     <span class="col-7 warning">Introduce un correo electronico valido</span>
                 </div>
 
@@ -68,7 +89,7 @@
                         <input type="password" id="passwd" class="form-control p-3 mb-1 bg-body rounded" style="height:10px" formControlName="passwd" onchange="ValidatePasswd()">
                     </div>
                 </div>
-                <div class="row d-felx justify-content-end" *ngIf="!ValidatePasswd()">
+                <div class="row d-felx justify-content-end">
                     <span class="col-7 warning">
                         La cotraseña debe de contener 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y 10 caracteres
                     </span>
@@ -76,8 +97,8 @@
 
                 <div class="row mt-5 d-felx justify-content-around">
                     <span class="col-3 d-flex justify-content-center align-items-center" style="cursor: pointer;" routerLink="/register"><small><u>Registro</u></small></span>
-                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" *ngIf="!Validate()" disabled> login</button>
-                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" (click)="login()" *ngIf="Validate()"> login</button>
+                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" disabled> login</button>
+                    <button class="button btn btn-outline-dark mb-2 col-3 justify-content-center align-items-center" type="submit" (click)="login()"> login</button>
                 </div>
             </form> 
         </div>

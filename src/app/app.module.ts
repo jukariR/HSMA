@@ -22,14 +22,14 @@ import { RegisterComponent } from './components/register/register.component';
   declarations: [
     NavbarComponent,
     AppComponent,
-    LoginComponent,
-    LandingPageComponent,
     ServicesPageComponent,
-    DashboardComponent,
     UsComponent,
-    RegisterComponent,
   ],
   imports: [
+    DashboardComponent,
+    RegisterComponent,
+    LandingPageComponent,
+    LoginComponent,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,

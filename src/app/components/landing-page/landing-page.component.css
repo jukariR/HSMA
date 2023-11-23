@@ -1,13 +1,13 @@
 h1, h5 {
     font-family: 'Source Code Pro', monospace;
-    color: #766153;
+    color: #151515;
     font-size: 2rem;
     font-weight: 800;
 }
 
 .h1-big {
     font-family: 'Source Code Pro', monospace;
-    color: #766153;
+    color: #151515;
     font-size: 3rem;
     font-weight: 800;
 }
@@ -17,7 +17,7 @@ p {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2;
-    color: #766153;
+    color: #151515;
 }
 
 .mid-img {
@@ -44,7 +44,7 @@ span {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.4;
-    color: #766153;
+    color: #151515;
 }
 
 .custom-container {

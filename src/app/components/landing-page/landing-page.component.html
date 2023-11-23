@@ -66,42 +66,44 @@
 
     </div>
 
-    <div class="row w-100 m-0 sections d-flex sec-pad" style="background-color: #766153;">
+    <div class="row w-100 m-0 sections d-flex sec-pad" style="background-color: #a7eafa;">
 
         <div class="col-12">
             <div class="row d-felx justify-content-center align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="h1-big" style="color: #ffffff;">Unete a la familia</h1>
+                    <h1 class="h1-big">Unete a la familia</h1>
                 </div>
 
                 <div class="container custom-container">
                     <form style="margin-top: 20px;">
                         <div class="form-group">
-                          <input type="text" class="form-control border-0 border-bottom" id="firstName" name="firstName" placeholder="Nombre" required>
+                            <mat-form-field style="width: 100%;">
+                                <mat-label>Nombre(s)</mat-label>
+                                <input matInput required>
+                            </mat-form-field>
                         </div>
                       
                         <div class="form-group">
-                          <input type="text" class="form-control border-0 border-bottom" id="lastName" name="lastName" placeholder="Apellidos" required>
+                            <mat-form-field style="width: 100%;">
+                                <mat-label>Apellido(s)</mat-label>
+                                <input matInput required>
+                            </mat-form-field>
                         </div>
                       
                         <div class="form-group">
-                          <input type="email" class="form-control border-0 border-bottom" id="email" name="email" placeholder="Correo" required>
-                        </div>
-                      
-                        <div class="form-group">
-                          <input type="date" class="form-control border-0 border-bottom" id="birthdate" name="birthdate" placeholder="Fecha de Nacimiento" required>
-                        </div>
-                      
-                        <div class="form-group">
-                          <input type="tel" class="form-control border-0 border-bottom" id="phoneNumber" name="phoneNumber" placeholder="Número Telefónico" required>
-                        </div>
-                      
-                        <div class="form-group">
-                          <input type="tel" class="form-control border-0 border-bottom" id="emergencyPhoneNumber" name="emergencyPhoneNumber" placeholder="Número Telefónico de Emergencia" required>
+                            <mat-form-field style="width: 100%;">
+                                <mat-label>Fecha de nacimiento</mat-label>
+                              <!-- #docregion toggle -->
+                                <input matInput required [matDatepicker]="picker">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              <!-- #enddocregion toggle -->
+                              </mat-form-field>
                         </div>
                       
                         <div class="text-center" style="margin-top: 20px;">
-                          <button type="submit" class="btn btn-primary" style="width: 180px;">Registrarse</button>
+                            <button mat-flat-button color="primary" style="width: 180px;" [routerLink]="['/register']">Registrarse</button>
                         </div>
                       </form>
                   </div>
