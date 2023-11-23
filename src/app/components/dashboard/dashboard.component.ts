@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
 
 import {
   MatBottomSheet,
@@ -57,7 +58,7 @@ export function ageValidator(minimumAge: number): ValidatorFn {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatCardModule, MatTabsModule, MatGridListModule, MatCardModule, MatListModule, NgForOf, MatBottomSheetModule],
+  imports: [FormsModule, MatFormFieldModule, MatIconModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatCardModule, MatTabsModule, MatGridListModule, MatCardModule, MatListModule, NgForOf, MatBottomSheetModule],
 })
 export class DashboardComponent implements OnInit {
   panelOpenState = false;
