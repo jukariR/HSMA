@@ -1,11 +1,11 @@
 export class AddressModel {
-    id: Number | undefined
-    street: String | undefined
-    number: Number | undefined
-    city: String | undefined
-    state: String | undefined
-    zipCode: Number | undefined
-    country: String | undefined
-    latitude: String | undefined
-    longitude: String | undefined
+    id: number | undefined
+    street: string | undefined
+    number: number | undefined
+    city: string | undefined
+    state: string | undefined
+    zipCode: number | undefined
+    country: string | undefined
+    latitude: string | undefined
+    longitude: string | undefined
 }

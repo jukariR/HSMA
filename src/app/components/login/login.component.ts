@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { isEmpty, timer } from 'rxjs';
-import { Login } from 'src/app/interfaces/hotel';
+import { Login } from 'src/app/interfaces/hotelinter';
 import { CrudService } from 'src/app/services/crud.service';
 
 import {

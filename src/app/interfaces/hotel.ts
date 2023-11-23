@@ -1,40 +1,23 @@
-export interface Address {
-    street: string;
-    number: string;
-    phone: string;
-    city: string; 
-    state: string;
-    colony: string;
-    country: string;
-    latitude: string;
-    longitude: string;
-}
+import { AddressModel } from "./address"
 
-export interface Payment {
-    number: string; //clabe bancaria
-    boucher: string;
-    amount: string;
-    verification: boolean;
-    type: number;
+export class HotelModel {
+    id: number
+    name: string
+    description: string
+    webSite: string
+    phone: string
+    url: string
+    clientId: number
+    address: AddressModel
+    
+    constructor(id: number, name: string, description: string, webSite: string, phone: string, url: string, clientId: number, address: AddressModel) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.webSite = webSite;
+        this.phone = phone;
+        this.url = url;
+        this.clientId = clientId;
+        this.address = address;
+    }
 }
-
-export interface Login {
-    email: string,
-    id: number,
-    password: string
-}
-
-export interface Staff {
-    name: string;
-    last: string;
-    birth: Date;
-    phone: string;
-    emerg_phone: string;
-    role: number;
-    address: Address;
-}
-/*
-export interface Hotel {
-
-}
-*/

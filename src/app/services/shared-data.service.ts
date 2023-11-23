@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { ClientModel } from '../interfaces/client';
 import { AddressModel } from '../interfaces/address';
+import { HotelModel } from '../interfaces/hotel';
 
 @Injectable({
   providedIn: 'root',
@@ -17,11 +18,14 @@ export class SharedDataService {
   private newAddress = new BehaviorSubject<AddressModel | null>(null);
   public newAddress$ = this.newAddress.asObservable();
 
+  private selectedHotel = new BehaviorSubject<HotelModel | null>(null);
+  public selectedHotel$ = this.selectedHotel.asObservable();
+
   updateData(data: any) {
     this.dataSubject.next(data);
   }
 
-  newUserData(name: String, lastName: String, birth: Date) {
+  newUserData(name: string, lastName: string, birth: Date) {
     let client = new ClientModel()
     client.name = name;
     client.lastName = lastName;
@@ -50,12 +54,12 @@ export class SharedDataService {
   }
 
   newUserAddress(
-    street: String,
-    number: Number,
-    city: String,
-    state: String,
-    zipCode: Number,
-    country: String,
+    street: string,
+    number: number,
+    city: string,
+    state: string,
+    zipCode: number,
+    country: string,
   ) {
     let address = new AddressModel()
     address.street = street;
@@ -65,5 +69,9 @@ export class SharedDataService {
     address.zipCode = zipCode;
     address.country = country;
     this.newAddress.next(address);
+  }
+
+  setSelectedHotel(hotel: HotelModel) {
+    this.selectedHotel.next(hotel);
   }
 }

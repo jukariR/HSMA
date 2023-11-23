@@ -5,8 +5,10 @@
 export const environment = {
   planetScale: {
     host: 'aws.connect.psdb.cloud',
-    username: 'qr9dlpm7r035g78vil34',
-    password: 'pscale_pw_2nxEZfZrPc4xNf8Ds8p1sIM8dGJTputwxiUxCgo6v5x'
+    port: '3306',
+    database: 'hsmadb',
+    username: 'j9lom4m61csbp8dncfom',
+    password: 'pscale_pw_QBKW0Eo1UVHqpFNoQGpeejxsG1y1FJEOewYe7d4TJaN'
   },
   production: false
 };

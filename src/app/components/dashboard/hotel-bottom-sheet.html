@@ -1,0 +1,212 @@
+<div style="min-width: 500px; min-height: 500px;">
+    <mat-tab-group>
+        <mat-tab label="Detalles"> 
+            <div style="padding: 20px 10px 10px 20px;">
+                <form [formGroup]="detailsFormGroup" (ngSubmit)="onUpdateDetails()">
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Nombre de hotel</mat-label>
+                            <input type="text" matInput placeholder="Nombre" formControlName="nameCtrl" required>
+                        </mat-form-field>
+                    </div>
+                  
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Descripción</mat-label>
+                            <input type="text" matInput placeholder="Descripción" formControlName="descriptionCtrl" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Sitio web</mat-label>
+                            <input type="url" matInput placeholder="Ex. https://google.com" formControlName="webSiteCtrl" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Teléfono</mat-label>
+                            <input type="tel" matInput placeholder="Ex. (33) 3333 3333" formControlName="phoneCtrl" required>
+                        </mat-form-field>
+                    </div>
+                
+                    <div>
+                        <button mat-button>Guardar</button>
+                    </div>                      
+                </form>
+            </div>
+        </mat-tab>
+        <mat-tab label="Dirección">
+            <div style="padding: 20px 10px 10px 20px;">
+                <form [formGroup]="addressFormGroup" (ngSubmit)="onUpdateAddress()">
+                    <ng-template matStepLabel>Dirección</ng-template>
+                    
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Calle</mat-label>
+                            <input type="text" matInput formControlName="streetCtrl" placeholder="Ex. Av. Linda" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Número</mat-label>
+                            <input type="text" matInput formControlName="numberCtrl" placeholder="Ex. 1234" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Ciudad</mat-label>
+                            <input type="text" matInput formControlName="cityCtrl" placeholder="Ex. Zapopan" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Estado</mat-label>
+                            <input type="text" matInput formControlName="stateCtrl" placeholder="Ex. Jalisco" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>Código postal</mat-label>
+                            <input type="text" matInput formControlName="zipCodeCtrl" placeholder="Ex. 12345" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field>
+                            <mat-label>País</mat-label>
+                            <input type="text" matInput formControlName="countryCtrl" placeholder="Ex. México" required>
+                        </mat-form-field>
+                    </div>
+
+                  <div>
+                    <button mat-button>Guardar</button>
+                  </div>
+                </form>
+            </div>
+        </mat-tab>
+        <mat-tab label="Administrador">
+            <div style="padding: 20px;">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <form [formGroup]="adminDetailsFormGroup" (ngSubmit)="onUpdateAdminDetails()">
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Usuario</mat-label>
+                                    <input type="text" matInput placeholder="Usuario" formControlName="userCtrl" required>
+                                </mat-form-field>
+                            </div>
+                          
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Contraseña</mat-label>
+                                    <input type="password" matInput placeholder="Contraseña" formControlName="passwordCtrl" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Nombre(s)</mat-label>
+                                    <input type="text" matInput placeholder="Nombre(s)" formControlName="nameCtrl" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Apellido(s)</mat-label>
+                                    <input type="text" matInput placeholder="Apellido(s)" formControlName="lastNameCtrl" required>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="form-group">
+                                <mat-form-field style="width: 100%;">
+                                    <mat-label>Fecha de nacimiento</mat-label>
+                                  <!-- #docregion toggle -->
+                                    <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="birthCtrl" required>
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                  <!-- #enddocregion toggle -->
+                                  </mat-form-field>
+                            </div>
+
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Teléfono</mat-label>
+                                    <input type="tel" matInput placeholder="Ex. (33) 3333 3333" formControlName="phoneCtrl" required>
+                                </mat-form-field>
+                            </div>
+                          
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Teléfono de emergencia</mat-label>
+                                    <input type="tel" matInput placeholder="Ex. (44) 4444 4444" formControlName="emergencyPhoneCtrl" required>
+                                </mat-form-field>
+                            </div>
+                        
+                            <div>
+                                <button mat-button>Guardar</button>
+                            </div>                      
+                        </form>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <form [formGroup]="adminAddressFormGroup" (ngSubmit)="onUpdateAdminAddress()">
+                            <ng-template matStepLabel>Dirección</ng-template>
+                            
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Calle</mat-label>
+                                    <input type="text" matInput formControlName="streetCtrl" placeholder="Ex. Av. Linda" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Número</mat-label>
+                                    <input type="text" matInput formControlName="numberCtrl" placeholder="Ex. 1234" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Ciudad</mat-label>
+                                    <input type="text" matInput formControlName="cityCtrl" placeholder="Ex. Zapopan" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Estado</mat-label>
+                                    <input type="text" matInput formControlName="stateCtrl" placeholder="Ex. Jalisco" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>Código postal</mat-label>
+                                    <input type="text" matInput formControlName="zipCodeCtrl" placeholder="Ex. 12345" required>
+                                </mat-form-field>
+                            </div>
+        
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label>País</mat-label>
+                                    <input type="text" matInput formControlName="countryCtrl" placeholder="Ex. México" required>
+                                </mat-form-field>
+                            </div>
+        
+                          <div>
+                            <button mat-button>Guardar</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
